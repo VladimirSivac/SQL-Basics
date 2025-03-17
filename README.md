@@ -7,15 +7,21 @@
 CREATE DATABASE class_journal;
 ```
 
+![Screenshot 1](screenshots/screenshot1.png)
+
 Теперь проверяем, что база данных появилась в списке:
 ```sql
 \l
 ```
 
+![Screenshot 2](screenshots/screenshot2.png)
+
 Подключаемся к базе данных:
 ```sql
 \c class_journal
 ```
+
+![Screenshot 3](screenshots/screenshot3.png)
 
 ## 📋 Этап 2: Создание таблицы "Ученики"
 Создаём таблицу students:
@@ -29,6 +35,8 @@ CREATE TABLE students (
     phone VARCHAR(20) NOT NULL
 );
 ```
+
+![Screenshot 4](screenshots/screenshot4.png)
 
 Теперь добавляем данные:
 ```sql
@@ -45,10 +53,14 @@ INSERT INTO Students (last_name, first_name, gender, address, phone) VALUES
 ('Ilyinykh', 'Mikhail', 'M', 'Lebedeva 14, apt.3', '244-43-50');
 ```
 
+![Screenshot 5](screenshots/screenshot5.png)
+
 Проверяем содержимое:
 ```sql
 SELECT * FROM Students;
 ```
+
+![Screenshot 6](screenshots/screenshot6.png)
 
 ## 📚 Этап 3: Создание таблицы "Предметы"
 Создаём таблицу subjects:
@@ -59,6 +71,8 @@ CREATE TABLE Subjects (
     teacher VARCHAR(100) NOT NULL
 );
 ```
+
+![Screenshot 7](screenshots/screenshot7.png)
 
 Добавляем данные:
 ```sql
@@ -73,10 +87,12 @@ INSERT INTO Subjects (subject_name, teacher) VALUES
 ('History', 'Onanov Yuri Petrovich');
 ```
 
+![Screenshot 8](screenshots/screenshot8.png)
+
 Проверяем содержимое:
 ```sql
 SELECT * FROM Subjects;
 ```
-
+![Screenshot 9](screenshots/screenshot9.png)
 ## 🔗 Заключение
 Мы создали базу данных class_journal, две таблицы и заполнили их данными. Теперь можно использовать их для запросов, анализа или дальнейшей доработки.
